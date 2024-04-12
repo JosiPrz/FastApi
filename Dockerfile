@@ -1,9 +1,11 @@
-FROM python3.11
+FROM python:3.11
 
 WORKDIR /code
 
 COPY requirements.txt requirements.txt
 RUN pip install requirements.txt
+
+COPY . /code
 
 EXPOSE 8000
 
